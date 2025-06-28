@@ -33,6 +33,7 @@ define LDD_INSTALL_TARGET_CMDS
     #     $(INSTALL) -m 0644 $$f $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/extra/; \
     # done
 
+    echo "Build directory is: $(@D)"
     $(INSTALL) -D -m 0755 $(@D)/misc-modules/module_load $(BIN_DIR)/module_load
     $(INSTALL) -D -m 0755 $(@D)/misc-modules/module_unload $(BIN_DIR)/module_unload
     $(INSTALL) -D -m 0755 $(@D)/scull/scull_load $(BIN_DIR)/scull_load
